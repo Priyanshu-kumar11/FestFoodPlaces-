@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        saffron: {
+           light: '#FFB347',
+           default: '#FF9933',
+           dark: '#FF7700',
+        },
+      },
       keyframes: {
         typing: {
           "0%": { width: "0" },
