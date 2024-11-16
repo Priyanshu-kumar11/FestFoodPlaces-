@@ -12,14 +12,6 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  const handleSmoothScroll = (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    const contactSection = document.getElementById("contact"); // Ensure this matches the id of your footer/contact section
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the contact section
-    }
-  };
-
   return (
     <>
       {/* Navbar wrapper */}
@@ -34,17 +26,20 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex font-bold space-x-4 px-4 py-2 border-saffron-light border-0 rounded-full text-lg text-saffron-dark">
               <Link to="/">
-                <li className="hover:text-saffron-light cursor-pointer">Home</li>
+                <li className="hover:text-saffron-light cursor-pointer">
+                  Home
+                </li>
               </Link>
               <Link to="/about">
-                <li className="hover:text-saffron-light cursor-pointer">About</li>
+                <li className="hover:text-saffron-light cursor-pointer">
+                  About
+                </li>
               </Link>
-              <li
-                className="hover:text-saffron-light cursor-pointer"
-                onClick={handleSmoothScroll}
-              >
+              <Link to="/contact">
+              <li className="hover:text-saffron-light cursor-pointer">
                 Contact
               </li>
+              </Link>
             </ul>
           </div>
           <p className="text-lg font-bold cursor-pointer hover:text-saffron-light text-saffron-dark">
@@ -75,10 +70,10 @@ const Navbar = () => {
             </Link>
             <li
               className="hover:text-saffron-light cursor-pointer"
-              onClick={(e) => {
-                handleSmoothScroll(e);
-                closeMenu(); // Close the menu after clicking
-              }}
+              // onClick={(e) => {
+              //   handleSmoothScroll(e);
+              //   closeMenu(); // Close the menu after clicking
+              // }}
             >
               Contact
             </li>

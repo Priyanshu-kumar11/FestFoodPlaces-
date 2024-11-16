@@ -3,7 +3,7 @@ import Contact from './Contact'
 
 const Footer = () => {
   return (
-    <div id="contact"><Contact/></div>
+    <div><Contact/></div>
   )
 }
 
