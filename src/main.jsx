@@ -6,6 +6,8 @@ import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, Ro
 import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
 import Footer from './Components/Footer.jsx'
+import Collection from './Components/Collection.jsx'
+import TopPicks from './Components/TopPicks.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +15,8 @@ const router = createBrowserRouter(
        <Route index element={<Home/>}/>
        <Route path='about' element={<About/>}/>
        <Route path='contact' element={<Footer/>}/>
+       <Route path='collection' element={<Collection/>}/>
+       <Route path='toppicks' element={<TopPicks/>}/>
     </Route>
   ),
   {
